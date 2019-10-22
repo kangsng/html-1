@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1.display 속성</title>
+    <style>
+        /* 
+            display:none 
+            - 브라우저에서 태그요소 제거(자리공간 포함)
+        */
+        .ex1 > span:nth-child(2) {
+            display: none;
+        }
+
+        /* 
+            display:block 
+            - inline 태그를 block 태그로 변환
+        */
+        .ex2 > span {
+            background: olive;
+        }
+        .ex2 > span:nth-child(2) {
+            display: block;
+        }
+
+        /* 
+            display:inline 
+            - block 태그를 inline 태그로 변환
+        */
+        .ex3 > div {
+            display: inline;
+        }
+
+        /* 
+            display:inline-block
+            - inline, block 태그를 inline-block 태그로 변환
+        */
+        .ex4 > span {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background: orange;
+        }
+        .ex4 > div {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background: olive;
+        }
+        
+    
+    </style>
+</head>
+<body>
+    <h3>1.display 속성</h3>
+
+    <h4>none</h4>
+    <div class="ex1">
+        <span>TEXT1</span>
+        <span>TEXT2</span>
+        <span>TEXT3</span>
+    </div>
+
+    <h4>block</h4>
+    <div class="ex2">
+        <span>TEXT1</span>
+        <span>TEXT2</span>
+        <span>TEXT3</span>
+    </div>
+    
+    <h4>inline</h4>
+    <div class="ex3">
+        <span>TEXT1</span>
+        <div>TEXT2</div>
+        <span>TEXT3</span>
+    </div>
+    
+    <h4>inline-block</h4>
+    <div class="ex4">
+        <span>TEXT1</span>
+        <div>TEXT2</div>
+        <span>TEXT3</span>
+    </div>
+
+
+    
+</body>
+</html>
