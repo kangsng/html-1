@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>제이시네마</title>
+    <link rel="shortcut icon" href="./img/favicon.ico"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap');
+
+        /* 초기화 */
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        ul, ol { list-style: none; }
+        a { text-decoration: none; color: #555; }
+
+        body {
+            font-family: 'Nanum Gothic', sans-serif;
+            font-size: 12px;
+            font-weight: normal;
+            line-height: 1;
+            color: #555;            
+        }
+
+        #wrapper {
+            width: 100%;
+            height: auto;
+            min-width: 980px;
+            border: 1px solid red;
+            box-sizing: border-box;
+        }
+
+        #wrapper > * {            
+            border: 1px solid blue;
+            box-sizing: border-box;
+        }
+
+        #top-banner {
+            width: 100%;
+            height: 80px;
+            background: rgb(255, 216, 0);
+        }
+
+        /* 헤더 */
+        header {
+            width: 100%;
+            height: auto;            
+        }
+
+        header > div > article {
+            width: 980px;
+            height: 100%;
+            border: 1px solid orange;
+            margin: 0 auto;
+        }
+
+        header > .service {
+            width: 100%;
+            height: 30px;
+            background: #efebdb;            
+        }
+
+        header > .logo {
+            width: 100%;
+            height: 80px;            
+        }
+        header > .logo > article {
+            text-align: center;
+        }
+        
+        header > .gnb {
+            width: 100%;
+            height: 72px;
+            border-top: 2px solid #cdc197;
+            border-bottom: 1px solid #e9e4d2;;
+        }
+
+
+        /* 메인 */
+        main {
+            width: 100%;
+            height: auto;            
+        }
+
+        main > div {
+            width: 100%;
+            border: 1px solid gray;
+            box-sizing: border-box;
+        }
+
+        main > div > article {
+            width: 980px;
+            height: 100%;
+            border: 1px solid orange;
+            margin: 0 auto;
+        }
+
+        main > .slider {            
+            height: 645px;
+            margin-top: 10px;            
+        }
+
+        main > .slider > div {
+            width: 1450px;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        main > .slider > div > ul {
+            float: left;
+            width: 1115px;
+            height: 100%;
+        }
+        main > .slider > div > ul > li {
+            width: 100%;
+            height: 100%;
+        }
+
+        main > .slider .box-office {
+            position: relative;
+            float: right;
+            width: 315px;
+            height: 100%;
+        }
+        main > .slider .box-office > .top {
+            width: 100%;
+            height: 153px;
+            text-align: center;
+            background: #2a2e33;
+        }
+
+        main > .slider .box-office > .top > img { 
+            margin-top: 50px;
+        }
+
+        main > .slider .box-office > .top > .tab {
+            display: block;
+            margin-top: 20px;
+        }
+
+        main > .slider .box-office > .top > .tab > a {
+            display: inline-block;
+            font-size: 14px;
+            padding-bottom: 3px;
+            color: #fff;            
+        }
+
+        main > .slider .box-office > .top > .tab > a.on {
+            border-bottom: 1px solid #7f8285;
+        }
+
+        main > .slider .box-office > .top > .tab > span {
+            color: #505862;
+            margin: 0 16px;
+        }
+
+        main > .slider .box-office > ul {
+            width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+        main > .slider .box-office > ul > li {
+            height: 54px;
+            padding: 11px 10px 0;
+            box-sizing: border-box;            
+        }
+
+        main > .slider .box-office > ul > li > span {
+            float: right;
+            display: inline-block;
+            height: 30px;
+            line-height: 30px;
+            color: #666;
+            font-size: 13px;
+        }
+        main > .slider .box-office > ul > li > span > em {
+            padding-left: 3px;
+        }
+
+        main > .slider .box-office > ul a {
+            color: #1a1917;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: -0.5px;
+        }
+
+        main > .slider .box-office > ul .rank {
+            line-height: 30px;
+            padding-right: 5px;
+            font-family: 'linlivertine';
+            font-style: italic;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        main > .slider .box-office > ul .grade {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-bottom: -4px;            
+            font-size: 0;
+            background-image: url('./img/sprite_bg_grade.png');
+            overflow: hidden;            
+        }
+
+        main > .slider .box-office > ul .gradeAll { background-position: 0 0;}
+        main > .slider .box-office > ul .grade12  {background-position: -21px 0;}
+        main > .slider .box-office > ul .grade15  {background-position: -42px 0;}
+        main > .slider .box-office > ul .grade18  {background-position: -63px 0;}
+        main > .slider .box-office > ul .grade19  {background-position: -84px 0;}
+        
+
+        main > .slider .box-office > ul .tit {
+            display: inline-block;
+            width: 150px;
+            height: 17px;
+            line-height: 13px;
+            vertical-align: middle;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        main > .slider .box-office > a {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            display: block;
+            width: 100%;
+            background: #ee1c25;
+            color: #fff;
+            height: 64px;
+            line-height: 64px;
+            font-weight: bold;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        main > .poster {
+            height: 274px;
+        }
+        main > .sponsor {
+            height: 88px;
+        }
+        main > .event {
+            height: 865px;
+            background: url('./img/bg_pattern.png');
+        }
+        main > .quick {
+            height: 260px;
+        }
+        main > .notice {
+            height: 60px;
+        }
+        
+
+        /* 푸터 */
+        footer {
+            width: 100%;
+            height: auto;
+        }
+        footer > div {
+            width: 100%;
+            border: 1px solid green;
+            box-sizing: border-box;
+        }
+        footer > div > article {
+            width: 980px;
+            height: 100%;
+            margin: 0 auto;
+            border: 1px solid orange;
+        }
+
+        footer > .banner {
+            height: 260px;
+        }
+
+        footer > .banner a {
+            display: block;            
+            margin-top: 20px;
+        }
+        
+        footer > .content {
+            height: 205px;
+        }
+        
+        footer > .award {
+            height: 78px;
+        }
+
+
+
+    
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="top-banner"></div>
+
+        <header>
+            <div class="service">
+                <article></article>
+            </div>
+            <div class="logo">
+                <article>
+                    <a href="#"><img src="./img/logo.gif" alt=""></a>
+                </article>                
+            </div>
+            <div class="gnb">
+                <article></article>
+            </div>
+        </header>
+        
+        <main>
+            <div class="slider">
+                <div>
+                    <ul>
+                        <li><img src="./img/KimJiyoung_1115645.jpg" alt=""></li>
+                    </ul>
+                    <div class="box-office">
+                        <div class="top">
+                            <img src="./img/tit_boxoffice.png" alt="BOX OFFICE">
+                            <span class="tab">
+                                <a href="#" class="on">예매순</a>
+                                <span>|</span>
+                                <a href="#">평점순</a>
+                            </span>
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <em class="rank">1.</em>
+                                    <span class="grade gradeAll">12</span>
+                                    <span class="tit">조커</span>
+                                </a>
+                                <span>예매율<em>24.2%</em></span>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <em class="rank">2.</em>
+                                    <span class="grade grade12">12</span>
+                                    <span class="tit">82년생 김지영</span>
+                                </a>
+                                <span>예매율<em>24.2%</em></span>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <em class="rank">3.</em>
+                                    <span class="grade grade15">12</span>
+                                    <span class="tit">가장 보통의 연애</span>
+                                </a>
+                                <span>예매율<em>24.2%</em></span>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <em class="rank">4.</em>
+                                    <span class="grade grade18">12</span>
+                                    <span class="tit">조커</span>
+                                </a>
+                                <span>예매율<em>24.2%</em></span>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <em class="rank">5.</em>
+                                    <span class="grade grade19">12</span>
+                                    <span class="tit">조커</span>
+                                </a>
+                                <span>예매율<em>24.2%</em></span>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <em class="rank">6.</em>
+                                    <span class="grade grade12">12</span>
+                                    <span class="tit">조커</span>
+                                </a>
+                                <span>예매율<em>24.2%</em></span>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <em class="rank">7.</em>
+                                    <span class="grade grade12">12</span>
+                                    <span class="tit">조커</span>
+                                </a>
+                                <span>예매율<em>24.2%</em></span>
+                            </li>
+                        </ul>
+                        <a href="#">예매하기</a>
+                    </div>
+                </div>
+            </div>
+            <div class="poster">
+                <article></article>
+            </div>
+            <div class="sponsor">
+                <article></article>
+            </div>
+            <div class="event">
+                <article></article>            
+            </div>
+            <div class="quick">
+                <article></article>
+            </div>
+            <div class="notice">
+                <article></article>
+            </div>            
+        </main>
+                
+        <footer>            
+            <div class="banner">
+                <article>
+                    <a href="#"><img src="./img/hyundaicard_980240.jpg" alt=""></a>
+                </article>                
+            </div>
+            <div class="content">
+                <article></article>
+            </div>
+            <div class="award">
+                <article></article>
+            </div>
+        </footer>
+    </div>    
+</body>
+</html>
