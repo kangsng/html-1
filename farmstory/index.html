@@ -166,12 +166,23 @@
         }
 
         main > .latest > article {
+            position: relative;
             float: left;
             width: 33.333%;
             height: 100%;
-            border: 1px solid blue;
-            box-sizing: border-box;
+        }
 
+        main > .latest > article > * {position: absolute;}
+        main > .latest > article > img:nth-child(1) {left: 0; top: 12px;}
+        main > .latest > article > img:nth-child(2) {left: 0; bottom: 25px;}
+        main > .latest > article > table {right: 16px; bottom: 22px; color: #6A6A6A;}
+        main > .latest > article > table tr > td:nth-child(2) {
+            display: block;
+            width: 132px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-height: 18px;
         }
 
         main > div.info {
@@ -245,7 +256,69 @@
                 <article>
                     <img src="./img/main_latest1_tit.png" alt="텃밭가꾸기">
                     <img src="./img/main_latest1_img.jpg" alt="이미지">
-                    <table border="1">
+                    <table border="0">
+                        <tr>
+                            <td>></td>
+                            <td>토마토! 건강하게 길러서 안심하고 드세요.</td>
+                            <td>19-10-22</td>
+                        </tr>
+                        <tr>
+                            <td>></td>
+                            <td>토마토! 건강하게 길러서 안심하고 드세요.</td>
+                            <td>19-10-22</td>
+                        </tr>
+                        <tr>
+                            <td>></td>
+                            <td>토마토! 건강하게 길러서 안심하고 드세요.</td>
+                            <td>19-10-22</td>
+                        </tr>
+                        <tr>
+                            <td>></td>
+                            <td>토마토! 건강하게 길러서 안심하고 드세요.</td>
+                            <td>19-10-22</td>
+                        </tr>
+                        <tr>
+                            <td>></td>
+                            <td>토마토! 건강하게 길러서 안심하고 드세요.</td>
+                            <td>19-10-22</td>
+                        </tr>
+                    </table>
+                </article>
+                <article>
+                    <img src="./img/main_latest2_tit.png" alt="귀농학교">
+                    <img src="./img/main_latest2_img.jpg" alt="이미지">
+                    <table border="0">
+                        <tr>
+                            <td>></td>
+                            <td>토마토! 건강하게 길러서 안심하고 드세요.</td>
+                            <td>19-10-22</td>
+                        </tr>
+                        <tr>
+                            <td>></td>
+                            <td>토마토! 건강하게 길러서 안심하고 드세요.</td>
+                            <td>19-10-22</td>
+                        </tr>
+                        <tr>
+                            <td>></td>
+                            <td>토마토! 건강하게 길러서 안심하고 드세요.</td>
+                            <td>19-10-22</td>
+                        </tr>
+                        <tr>
+                            <td>></td>
+                            <td>토마토! 건강하게 길러서 안심하고 드세요.</td>
+                            <td>19-10-22</td>
+                        </tr>
+                        <tr>
+                            <td>></td>
+                            <td>토마토! 건강하게 길러서 안심하고 드세요.</td>
+                            <td>19-10-22</td>
+                        </tr>
+                    </table>
+                </article>
+                <article>
+                    <img src="./img/main_latest3_tit.png" alt="농작물이야기">
+                    <img src="./img/main_latest3_img.jpg" alt="이미지">
+                    <table border="0">
                         <tr>
                             <td>></td>
                             <td>토마토! 건강하게 길러서 안심하고 드세요.</td>
@@ -274,9 +347,7 @@
                     </table>
                 </article>
 
-
-                <article></article>
-                <article></article>
+              
             </div>
 
             <div class="info"></div>
