@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>팜스토리::인사말</title>
+    <link rel="stylesheet" href="/farmstory/css/style.css">
+    <style>
+        /* 서브공통 */
+        .sub {
+            width: 100%;
+            height: auto;
+            border: 1px solid red;
+            box-sizing: border-box;
+        }
+        .sub > div {
+            width: 100%;
+            border: 1px solid blue;
+            box-sizing: border-box;
+        }
+        .sub > div:nth-child(1) {
+            height: 184px;
+            background-image: url('../img/sub_top_bg.jpg');
+        }
+        .sub > div:nth-child(1) > img {
+            margin-top: 130px;
+            margin-left: 10px;
+        }
+        .sub > div:nth-child(2) {
+            height: auto;
+            overflow: hidden;
+        }        
+        .sub > div:nth-child(2) > aside {
+            float: left;
+            width: 18%;
+            height: 650px;
+            border: 1px solid green;
+            box-sizing: border-box;
+        }
+        .sub > div:nth-child(2) > article {
+            float: right;
+            width: 82%;
+            min-height: 650px;
+            border: 1px solid green;
+            box-sizing: border-box;
+        }    
+    
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <a href="/farmstory" class="logo"><img src="/farmstory/img/logo.png" alt="로고"></a>
+            <p>
+                <a href="/farmstory">HOME</a>|
+                <a href="#">로그인</a>|
+                <a href="#">회원가입</a>|
+                <a href="#">고객센터</a>
+            </p>
+            <img src="/farmstory/img/head_txt_img.png" alt="3만원 이상 무료배송, 팜카드 10% 적립">
+
+            <ul class="gnb">
+                <li><a href="/farmstory/introduction/hello.html">팜스토리소개</a></li>
+                <li><a href="#"><img src="/farmstory/img/head_menu_badge.png" alt="30%">장보기</a></li>
+                <li><a href="#">농작물이야기</a></li>
+                <li><a href="#">이벤트</a></li>
+                <li><a href="#">커뮤니티</a></li>
+            </ul>
+        </header>
+
+        <section class="sub">
+            <div><img src="../img/sub_top_tit1.png" alt="INTRODUCTION"></div>
+            <div>
+                <aside></aside>
+                <article></article>
+            </div>
+        </section>
+
+        <footer>
+            <img src="../img/footer_logo.png" alt="로고">
+            <p>
+                (주)더조은 / 사업자등록번호 123-45-67890 / 통신판매업신고 제 2013-더조은-123호 / 벤처기업확인 부산지방중소기업청 제 012345678-9-01234호<br>
+                등록번호 더조은01234 (2013.04.01) / 발행인 : 홍길동<br>
+                대표 : 홍길동 / 이메일 : email@mail.mail / 전화 : 01) 234-5678 / 부산시 부산진구 부전동 345<br>
+                <strong>Copyright(C)홍길동 All rights reserved.</strong>
+            </p>
+        </footer>
+    </div>
+    
+</body>
+</html>
