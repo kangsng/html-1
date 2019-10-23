@@ -9,13 +9,9 @@
         .sub {
             width: 100%;
             height: auto;
-            border: 1px solid red;
-            box-sizing: border-box;
         }
         .sub > div {
             width: 100%;
-            border: 1px solid blue;
-            box-sizing: border-box;
         }
         .sub > div:nth-child(1) {
             height: 184px;
@@ -29,19 +25,55 @@
             height: auto;
             overflow: hidden;
         }        
-        .sub > div:nth-child(2) > aside {
+        .sub .lnb {
             float: left;
             width: 18%;
             height: 650px;
-            border: 1px solid green;
-            box-sizing: border-box;
+            background-image: url('../img/sub_aside_bg_line.png');
+            background-repeat: no-repeat;
+            background-position: right center;
         }
+
+        .sub .lnb > img {}
+        .sub .lnb > ul {
+            width: 175px;
+            height: 233px;
+            border: 1px solid red;
+            box-sizing: border-box;
+            background-image: url('../img/sub_aside_bg_lnb.png');
+            padding-top: 38px;
+        }
+        .sub .lnb > ul > li {
+            width: 100%;
+            height: 29px;
+            border: 1px solid blue;
+            box-sizing: border-box;
+            margin-bottom: 6px;
+        }
+        .sub .lnb a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: 1px solid pink;
+            box-sizing: border-box;
+            font-size: 0;
+        }
+        
+        /* 서브메뉴 - 팜스토리소개 */
+        .sub .lnb > ul > li:nth-child(1) > a {background-image: url('../img/sub_cate1_lnb1.png');}
+        .sub .lnb > ul > li:nth-child(2) > a {background-image: url('../img/sub_cate1_lnb2.png');}
+        .sub .lnb > ul > li:nth-child(1) > a:hover {background-image: url('../img/sub_cate1_lnb1_ov.png');}
+        .sub .lnb > ul > li:nth-child(2) > a:hover {background-image: url('../img/sub_cate1_lnb2_ov.png');}
+
+        /* 서브메뉴 - 장보기 */
+        /* 서브메뉴 - 농작물이야기 */
+        /* 서브메뉴 - 이벤트 */
+        /* 서브메뉴 - 커뮤니티 */
+
         .sub > div:nth-child(2) > article {
             float: right;
             width: 82%;
             min-height: 650px;
-            border: 1px solid green;
-            box-sizing: border-box;
         }    
     
     </style>
@@ -70,7 +102,13 @@
         <section class="sub">
             <div><img src="../img/sub_top_tit1.png" alt="INTRODUCTION"></div>
             <div>
-                <aside></aside>
+                <aside class="lnb">
+                    <img src="/farmstory/img/sub_aside_cate1_tit.png" alt="팜스토리소개">
+                    <ul>
+                        <li><a href="#">인사말</a></li>
+                        <li><a href="#">찾아오시는길</a></li>
+                    </ul>
+                </aside>
                 <article></article>
             </div>
         </section>
